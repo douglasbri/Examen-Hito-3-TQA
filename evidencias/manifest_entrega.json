@@ -1,0 +1,187 @@
+[
+  {
+    "archivo": ".gitignore",
+    "bytes": 43,
+    "sha256": "b0be1efa269ca07819e9792c0519a66ccf4a076e4a10310bee3d28ef6e510a84"
+  },
+  {
+    "archivo": "bugs/BUG-001.md",
+    "bytes": 2813,
+    "sha256": "a75fa94306fef27efd5b5ceb79ee4913679dc0f98d760f1dee80f75edd7bfc2c"
+  },
+  {
+    "archivo": "bugs/BUG-002.md",
+    "bytes": 2855,
+    "sha256": "6bae19642d538e96cb37501958e6a03d94c1bc1bae87ec82230f7f076a32cc6e"
+  },
+  {
+    "archivo": "bugs/bugs_encontrados.md",
+    "bytes": 443,
+    "sha256": "9a33bc615e459838dccda48254fb7082a3f67f389ef352886481e00b0ffe1829"
+  },
+  {
+    "archivo": "docs/analisis_caja_blanca.md",
+    "bytes": 3871,
+    "sha256": "b51ffa975438135931821a19c5e009f1410ecbcdc4d6e42c997b4cf15b5187a9"
+  },
+  {
+    "archivo": "docs/casos_caja_negra.md",
+    "bytes": 13004,
+    "sha256": "55f6682c740f4e8161eda001f15d85d75112e110a46bdb532e8994e01970946f"
+  },
+  {
+    "archivo": "docs/diseno_previo.md",
+    "bytes": 2217,
+    "sha256": "3a7eafc27623a607b49bada656eb97c3a299f7a7c141811762db23c0b90ea8fd"
+  },
+  {
+    "archivo": "docs/escenarios_gherkin.md",
+    "bytes": 1211,
+    "sha256": "3ee72d25aeaf494f9a82aa421d9b5983102f5e08d55c07f244011e672f5ca618"
+  },
+  {
+    "archivo": "docs/login.feature",
+    "bytes": 882,
+    "sha256": "f6b97959b5d6baf9bf5a88a1015ea3e4acc73f1c400ba2efeaf888305c5c2957"
+  },
+  {
+    "archivo": "entregable/informe_hito3.pdf",
+    "bytes": 601738,
+    "sha256": "a7ef335dcf99af722f3e342c42eaff53e3285d4f9ecffab34cbfb47b8d3423c9"
+  },
+  {
+    "archivo": "evidencias/caja_blanca_ejecucion.json",
+    "bytes": 2376,
+    "sha256": "70c462ec626d42730fe907b9c7ce8dc3739913c70e964dc7e6f1f022c5ae3a21"
+  },
+  {
+    "archivo": "evidencias/capturas/BUG-001_antes_ordenar.png",
+    "bytes": 45193,
+    "sha256": "41e674511e19e5c8afcd5a1b1c2d1f4c12fb1c96a8ecd5c8e9d2b8b900c5bb70"
+  },
+  {
+    "archivo": "evidencias/capturas/BUG-001_orden_sin_cambios.png",
+    "bytes": 45193,
+    "sha256": "41e674511e19e5c8afcd5a1b1c2d1f4c12fb1c96a8ecd5c8e9d2b8b900c5bb70"
+  },
+  {
+    "archivo": "evidencias/capturas/BUG-001_repeticion.png",
+    "bytes": 45193,
+    "sha256": "41e674511e19e5c8afcd5a1b1c2d1f4c12fb1c96a8ecd5c8e9d2b8b900c5bb70"
+  },
+  {
+    "archivo": "evidencias/capturas/BUG-002_alternativa_carrito.png",
+    "bytes": 19399,
+    "sha256": "0857d67a4152247f31620491164c367175a7449746b9f8422ec6dabd80f0ee63"
+  },
+  {
+    "archivo": "evidencias/capturas/BUG-002_antes_remove.png",
+    "bytes": 45351,
+    "sha256": "6fbe5701294e0dacf6b3e5c34d5314ce3106242aef60a108fff219bc189ab121"
+  },
+  {
+    "archivo": "evidencias/capturas/BUG-002_carrito_persistente.png",
+    "bytes": 29635,
+    "sha256": "440e5766781c69546208bc8611df712c7d66ef06791dd1c5a5036e427b9b0514"
+  },
+  {
+    "archivo": "evidencias/capturas/BUG-002_remove_sin_efecto.png",
+    "bytes": 45351,
+    "sha256": "6fbe5701294e0dacf6b3e5c34d5314ce3106242aef60a108fff219bc189ab121"
+  },
+  {
+    "archivo": "evidencias/capturas/BUG-002_repeticion.png",
+    "bytes": 45351,
+    "sha256": "6fbe5701294e0dacf6b3e5c34d5314ce3106242aef60a108fff219bc189ab121"
+  },
+  {
+    "archivo": "evidencias/capturas/CONTROL_orden_standard_user.png",
+    "bytes": 46158,
+    "sha256": "930a96681f008489ce939eb0735b5fcc21a2070bf83f6f6bf6414845ec1b744e"
+  },
+  {
+    "archivo": "evidencias/capturas/CONTROL_remove_standard_user.png",
+    "bytes": 51612,
+    "sha256": "7d6b73d86a1e621084652ade1514553871aab3190a8cfface6e5f04e0d907fcc"
+  },
+  {
+    "archivo": "evidencias/capturas/TC-001_login_valido.png",
+    "bytes": 18904,
+    "sha256": "03b7bf7298873156079f4e7df626c3b0362c1a411a239fe9617783382d858c7b"
+  },
+  {
+    "archivo": "evidencias/capturas/TC-002_login_invalido.png",
+    "bytes": 25750,
+    "sha256": "2685e468897b3f7dbccf9180eb0b83d0fe5b277da85a6c20d32f25ff1a300330"
+  },
+  {
+    "archivo": "evidencias/capturas/TC-003_carrito.png",
+    "bytes": 23500,
+    "sha256": "9563c2a7e37109f7d825a5b7aa3c0f9c826c2c12edcfb25af34e2f9a1e9cc0c0"
+  },
+  {
+    "archivo": "evidencias/capturas/TC-004_nombre_obligatorio.png",
+    "bytes": 20748,
+    "sha256": "089d20c19b30c81d440b255ab7efa1515473b26d7f8ba353c2f26d32e3321b14"
+  },
+  {
+    "archivo": "evidencias/capturas/TC-005_compra_completa.png",
+    "bytes": 27471,
+    "sha256": "80b4e6bda03d6dc84d99b781f55ad5ee78318e50530b98cae5ebd1f1348b4c36"
+  },
+  {
+    "archivo": "evidencias/capturas/TC-005_confirmacion_repeticion.png",
+    "bytes": 27471,
+    "sha256": "80b4e6bda03d6dc84d99b781f55ad5ee78318e50530b98cae5ebd1f1348b4c36"
+  },
+  {
+    "archivo": "evidencias/capturas/TC-005_importes_verificados.png",
+    "bytes": 26727,
+    "sha256": "fd589ed28be15132902becdba170fdcbe98fd1fb8b055c2a6e6bd4bc5039a539"
+  },
+  {
+    "archivo": "evidencias/capturas/TC-005_resumen_compra.png",
+    "bytes": 26047,
+    "sha256": "81c99ea91856e90ef1544325a6d56f423ca2e22769abd586ee5562cc4523d183"
+  },
+  {
+    "archivo": "evidencias/registro_ejecucion.json",
+    "bytes": 33352,
+    "sha256": "0085795e801c68155b101696ba58ce74f43163fe00049155ca4bfbff86c528c3"
+  },
+  {
+    "archivo": "evidencias/resultados_estructurados.json",
+    "bytes": 16308,
+    "sha256": "918830faaa40c5459d764dd33bc777f1d2fea6473570010cb4e84dabb3e84a92"
+  },
+  {
+    "archivo": "gestion/guia_publicacion.md",
+    "bytes": 2570,
+    "sha256": "1c2bea5df52f42685bd9987b6b5350f2811bb78bca9b02cf6a9fb5af81324378"
+  },
+  {
+    "archivo": "gestion/issues_propuestos.md",
+    "bytes": 2461,
+    "sha256": "0b982888a0587c8a3d0cf4c81c50e93bcd20ed30cc0c69cdb18fdfcc9c357c69"
+  },
+  {
+    "archivo": "gestion/tablero_propuesto.csv",
+    "bytes": 842,
+    "sha256": "a4634b38fb509f376c11f9ed89e6f7295c21d3706464755b8d878963b036e85b"
+  },
+  {
+    "archivo": "README.md",
+    "bytes": 2356,
+    "sha256": "7fa744f63ba4cb0eb1e386e18f6a11f82a966453b6392c897eacbac19ba06f9d"
+  },
+  {
+    "archivo": "src/validar_compra.py",
+    "bytes": 295,
+    "sha256": "f38a773bb4ea0c84c19f114d14ab0c940537b92381cfee8e0ec497dbaa85a6ba"
+  },
+  {
+    "archivo": "src/verificar_caja_blanca.py",
+    "bytes": 1991,
+    "sha256": "1e4f4e6a170e96da06474832f9f239d30aea86783e87b088244961f7fb3ca968"
+  }
+]

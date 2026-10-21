@@ -1,0 +1,319 @@
+{
+  "estudiante": "Douglas Brian Aliaga Quisbert",
+  "docente": "REYNEL SANCHEZ CHUQUIMIA",
+  "ambiente": "Windows; navegador integrado de Codex; sitio público de demostración SauceDemo. Versión del sitio y del navegador no expuesta en la interfaz consultada.",
+  "ejecutor": "Codex, asistente de Douglas Brian Aliaga Quisbert, por autorización del estudiante",
+  "casos": [
+    {
+      "id": "TC-001",
+      "title": "Inicio de sesión con credenciales válidas",
+      "module": "Login",
+      "priority": "Alta",
+      "kind": "Funcional positiva",
+      "objective": "Verificar que un usuario habilitado accede al catálogo.",
+      "pre": "Abrir https://www.saucedemo.com/ sin una sesión activa.",
+      "user": "standard_user, usuario de demostración habilitado",
+      "config": "Conexión a Internet; campos de login vacíos.",
+      "data": "Username: standard_user. Password: secret_sauce.",
+      "origin": "Credenciales públicas indicadas en la pantalla de SauceDemo.",
+      "special": "La contraseña pertenece al sitio de demostración.",
+      "steps": [
+        [
+          "Abrir la página de login.",
+          "https://www.saucedemo.com/",
+          "Mostrar Username, Password y Login.",
+          "Formulario de acceso visible."
+        ],
+        [
+          "Ingresar las credenciales válidas.",
+          "standard_user / secret_sauce",
+          "Campos completos y contraseña enmascarada.",
+          "Se ingresaron los datos indicados."
+        ],
+        [
+          "Pulsar Login.",
+          "Credenciales completas",
+          "Abrir el catálogo Products.",
+          "Abrió /inventory.html con Products y seis productos en el estado accesible de la página."
+        ]
+      ],
+      "success": "Acceso al catálogo Products sin mensaje de error.",
+      "observed": "Se accedió al catálogo y se mostraron los productos.",
+      "evidence": [
+        "TC-001_login_valido.png"
+      ],
+      "notes": "El número de productos se comprobó en el estado accesible del catálogo; la captura muestra la parte visible de la página.",
+      "status": "PASS",
+      "executed_by": "Codex, asistente de Douglas Brian Aliaga Quisbert, por autorización del estudiante",
+      "date": "20/10/2026 21:12:38",
+      "environment": "Windows; navegador integrado de Codex; sitio público de demostración SauceDemo. Versión del sitio y del navegador no expuesta en la interfaz consultada.",
+      "version": "No expuesta por el sitio",
+      "bug": "N/A"
+    },
+    {
+      "id": "TC-002",
+      "title": "Rechazo de contraseña incorrecta",
+      "module": "Login",
+      "priority": "Alta",
+      "kind": "Funcional negativa",
+      "objective": "Verificar que una contraseña incorrecta no permite acceder.",
+      "pre": "Cerrar sesión con Open Menu > Logout y abrir la página de login.",
+      "user": "standard_user con contraseña incorrecta",
+      "config": "Sin sesión activa y formulario de login disponible.",
+      "data": "Username: standard_user. Password: incorrecta_2026.",
+      "origin": "Usuario público de SauceDemo y contraseña inválida preparada para esta prueba.",
+      "special": "El mensaje de rechazo es el comportamiento esperado y representa PASS.",
+      "steps": [
+        [
+          "Cerrar la sesión anterior.",
+          "Open Menu > Logout",
+          "Volver al formulario de login.",
+          "Se mostró el formulario sin sesión."
+        ],
+        [
+          "Ingresar usuario válido y contraseña incorrecta.",
+          "standard_user / incorrecta_2026",
+          "Permitir enviar las credenciales para validarlas.",
+          "Se ingresaron los datos del caso."
+        ],
+        [
+          "Pulsar Login.",
+          "Credenciales inválidas",
+          "Permanecer en login y avisar que las credenciales no coinciden.",
+          "Permaneció en / y mostró Epic sadface: Username and password do not match any user in this service."
+        ]
+      ],
+      "success": "Denegar el acceso con un mensaje de credenciales incorrectas.",
+      "observed": "Acceso denegado y mensaje esperado visible.",
+      "evidence": [
+        "TC-002_login_invalido.png"
+      ],
+      "notes": "No se registra un bug porque el rechazo coincide con el resultado esperado.",
+      "status": "PASS",
+      "executed_by": "Codex, asistente de Douglas Brian Aliaga Quisbert, por autorización del estudiante",
+      "date": "20/10/2026 21:12:51",
+      "environment": "Windows; navegador integrado de Codex; sitio público de demostración SauceDemo. Versión del sitio y del navegador no expuesta en la interfaz consultada.",
+      "version": "No expuesta por el sitio",
+      "bug": "N/A"
+    },
+    {
+      "id": "TC-003",
+      "title": "Agregar una mochila al carrito",
+      "module": "Catálogo y carrito",
+      "priority": "Alta",
+      "kind": "Funcional positiva",
+      "objective": "Verificar que agregar un producto actualiza la insignia y el contenido del carrito.",
+      "pre": "Iniciar sesión con standard_user y disponer de carrito vacío.",
+      "user": "standard_user autenticado",
+      "config": "Catálogo Products disponible; Sauce Labs Backpack sin agregar.",
+      "data": "Producto: Sauce Labs Backpack. Cantidad: 1. Precio visible: USD 29.99.",
+      "origin": "Producto y precio del catálogo observado antes de agregarlo.",
+      "special": "El caso utiliza un único producto para comprobar identidad, cantidad y precio.",
+      "steps": [
+        [
+          "Pulsar Add to cart de Sauce Labs Backpack.",
+          "Sauce Labs Backpack",
+          "Cambiar a Remove y mostrar una insignia 1.",
+          "El botón cambió a Remove y Cart indicó 1 item."
+        ],
+        [
+          "Abrir el carrito.",
+          "Botón Cart",
+          "Mostrar el producto añadido.",
+          "Abrió /cart.html con Sauce Labs Backpack."
+        ],
+        [
+          "Revisar cantidad, precio e insignia.",
+          "1 unidad; USD 29.99",
+          "Un único producto, cantidad 1, precio 29.99 e insignia 1.",
+          "Se observaron los cuatro valores esperados."
+        ]
+      ],
+      "success": "El carrito conserva exactamente una mochila y sus datos correctos.",
+      "observed": "Mochila, cantidad 1, precio USD 29.99 e insignia 1 correctos.",
+      "evidence": [
+        "TC-003_carrito.png"
+      ],
+      "notes": "El carrito preparado se utilizó como precondición del siguiente caso; los pasos permiten recrearlo de forma independiente.",
+      "status": "PASS",
+      "executed_by": "Codex, asistente de Douglas Brian Aliaga Quisbert, por autorización del estudiante",
+      "date": "20/10/2026 21:13:02",
+      "environment": "Windows; navegador integrado de Codex; sitio público de demostración SauceDemo. Versión del sitio y del navegador no expuesta en la interfaz consultada.",
+      "version": "No expuesta por el sitio",
+      "bug": "N/A"
+    },
+    {
+      "id": "TC-004",
+      "title": "Validación del nombre obligatorio en checkout",
+      "module": "Checkout",
+      "priority": "Alta",
+      "kind": "Funcional negativa",
+      "objective": "Comprobar que el checkout no avanza cuando falta First Name.",
+      "pre": "standard_user autenticado, mochila en carrito y Checkout abierto.",
+      "user": "standard_user autenticado",
+      "config": "Formulario Checkout: Your Information; todos los campos vacíos.",
+      "data": "First Name: vacío. Last Name: vacío. Zip/Postal Code: vacío.",
+      "origin": "Valores vacíos preparados para probar la primera validación obligatoria.",
+      "special": "Este caso comprueba First Name; no afirma cubrir todas las combinaciones de campos vacíos.",
+      "steps": [
+        [
+          "Abrir Checkout desde el carrito.",
+          "Una mochila en carrito",
+          "Mostrar Checkout: Your Information.",
+          "Abrió /checkout-step-one.html."
+        ],
+        [
+          "Conservar los tres campos vacíos.",
+          "Sin nombre, apellido ni código postal",
+          "Formulario listo para comprobar el campo obligatorio.",
+          "Los tres campos permanecieron vacíos."
+        ],
+        [
+          "Pulsar Continue.",
+          "Formulario vacío",
+          "Mostrar Error: First Name is required y no avanzar.",
+          "Mostró exactamente el mensaje esperado y permaneció en checkout-step-one.html."
+        ]
+      ],
+      "success": "Mostrar el aviso del nombre obligatorio sin avanzar al resumen.",
+      "observed": "El formulario rechazó el avance con Error: First Name is required.",
+      "evidence": [
+        "TC-004_nombre_obligatorio.png"
+      ],
+      "notes": "El aviso observado es una validación correcta y representa PASS.",
+      "status": "PASS",
+      "executed_by": "Codex, asistente de Douglas Brian Aliaga Quisbert, por autorización del estudiante",
+      "date": "20/10/2026 21:13:16",
+      "environment": "Windows; navegador integrado de Codex; sitio público de demostración SauceDemo. Versión del sitio y del navegador no expuesta en la interfaz consultada.",
+      "version": "No expuesta por el sitio",
+      "bug": "N/A"
+    },
+    {
+      "id": "TC-005",
+      "title": "Completar una compra de demostración",
+      "module": "Checkout",
+      "priority": "Alta",
+      "kind": "Funcional positiva",
+      "objective": "Comprobar el resumen, el cálculo monetario y la confirmación del pedido.",
+      "pre": "standard_user autenticado; una mochila en carrito; formulario de checkout abierto.",
+      "user": "standard_user autenticado",
+      "config": "Sauce Labs Backpack, una unidad. No hay otros artículos.",
+      "data": "First Name: Prueba. Last Name: TQA. Zip/Postal Code: 00000. Subtotal esperado: USD 29.99. Impuesto esperado: USD 2.40. Total esperado: USD 32.39.",
+      "origin": "Datos personales sintéticos preparados para el caso; precio observado en catálogo.",
+      "special": "Solo se realiza una compra del sitio de demostración; no se ingresan datos de pago reales.",
+      "steps": [
+        [
+          "Completar el formulario.",
+          "Prueba / TQA / 00000",
+          "Aceptar los tres valores.",
+          "Los campos recibieron los valores indicados."
+        ],
+        [
+          "Pulsar Continue.",
+          "Formulario completo",
+          "Mostrar Checkout: Overview con la mochila.",
+          "Se mostró el resumen con una mochila."
+        ],
+        [
+          "Verificar los importes.",
+          "29.99 + 2.40 = 32.39",
+          "Subtotal USD 29.99, impuesto USD 2.40 y total USD 32.39.",
+          "Los tres importes coincidieron."
+        ],
+        [
+          "Pulsar Finish.",
+          "Resumen comprobado",
+          "Mostrar Checkout: Complete! y Thank you for your order!; carrito vacío.",
+          "Se mostraron ambos textos y Cart quedó vacío."
+        ]
+      ],
+      "success": "Pedido de demostración confirmado y valores monetarios correctos.",
+      "observed": "Compra confirmada con total USD 32.39 y carrito vacío.",
+      "evidence": [
+        "TC-005_resumen_compra.png",
+        "TC-005_compra_completa.png",
+        "TC-005_importes_verificados.png",
+        "TC-005_confirmacion_repeticion.png"
+      ],
+      "notes": "Se repitió el flujo para capturar los importes situados más abajo en la pantalla. La captura de importes corresponde a esa repetición; ambos pedidos de demostración finalizaron correctamente.",
+      "status": "PASS",
+      "executed_by": "Codex, asistente de Douglas Brian Aliaga Quisbert, por autorización del estudiante",
+      "date": "20/10/2026 21:13:25",
+      "environment": "Windows; navegador integrado de Codex; sitio público de demostración SauceDemo. Versión del sitio y del navegador no expuesta en la interfaz consultada.",
+      "version": "No expuesta por el sitio",
+      "bug": "N/A"
+    }
+  ],
+  "bugs": [
+    {
+      "id": "BUG-001",
+      "title": "error_user no puede ordenar el catálogo por precio ascendente",
+      "description": "Al elegir Price (low to high) con error_user aparece una alerta de error y el catálogo conserva el orden por nombre.",
+      "pre": "Sesión nueva de error_user, carrito vacío y catálogo en Name (A to Z).",
+      "data": "error_user / secret_sauce; opción Price (low to high).",
+      "steps": [
+        "Abrir SauceDemo sin sesión activa.",
+        "Iniciar sesión con error_user / secret_sauce.",
+        "En Products abrir Sort products.",
+        "Seleccionar Price (low to high).",
+        "Observar la alerta, pulsar OK y revisar el selector y los productos."
+      ],
+      "expected": "Orden creciente por precio: 7.99, 9.99, 15.99, 15.99, 29.99, 49.99, sin alerta de error.",
+      "actual": "Aparece Sorting is broken! This error has been reported to Backtrace. Al cerrar con OK, el selector conserva Name (A to Z) y los productos siguen por nombre.",
+      "priority": "Media (3 de 5, valoración propuesta)",
+      "severity": "Media (3 de 5, valoración propuesta)",
+      "impact": "Impide ordenar por precio; el catálogo permanece visible.",
+      "reference": "EX-001 y EX-002; exploraciones adicionales a los cinco TC principales.",
+      "repro": "Reproducido en 2 de 2 sesiones nuevas de error_user.",
+      "control": "Con standard_user la selección Price (low to high) ordenó correctamente los seis precios.",
+      "workaround": "Utilizar standard_user para la práctica; no es una corrección del defecto de error_user.",
+      "evidence": [
+        "BUG-001_antes_ordenar.png",
+        "BUG-001_orden_sin_cambios.png",
+        "BUG-001_repeticion.png",
+        "CONTROL_orden_standard_user.png"
+      ],
+      "note": "La captura visual se realizó después de cerrar la alerta: el navegador no permitió capturar imágenes mientras el diálogo JavaScript estaba abierto. El texto exacto de la alerta y sus dos apariciones constan en registro_ejecucion.json.",
+      "dates": [
+        "20/10/2026 21:14:29",
+        "20/10/2026 21:15:48"
+      ]
+    },
+    {
+      "id": "BUG-002",
+      "title": "Remove del catálogo no elimina la mochila con error_user",
+      "description": "Con error_user, Remove en la tarjeta de Sauce Labs Backpack no modifica el carrito.",
+      "pre": "error_user autenticado, carrito inicialmente vacío y catálogo disponible.",
+      "data": "error_user / secret_sauce; Sauce Labs Backpack, una unidad.",
+      "steps": [
+        "Iniciar una sesión de error_user con carrito vacío.",
+        "Pulsar Add to cart en Sauce Labs Backpack.",
+        "Comprobar Remove e insignia 1.",
+        "Pulsar Remove en la tarjeta del catálogo.",
+        "Abrir Cart y comprobar que la mochila permanece."
+      ],
+      "expected": "Eliminar la mochila, quitar la insignia y restaurar Add to cart en el catálogo.",
+      "actual": "Remove e insignia 1 permanecen; al abrir Your Cart sigue una mochila, cantidad 1 y precio USD 29.99.",
+      "priority": "Media (3 de 5, valoración propuesta)",
+      "severity": "Media (3 de 5, valoración propuesta)",
+      "impact": "Impide eliminar desde el catálogo y puede confundir al usuario; existe una alternativa desde el carrito.",
+      "reference": "EX-003; exploración adicional a los cinco TC principales.",
+      "repro": "Reproducido en 2 de 2 sesiones nuevas de error_user.",
+      "control": "Con standard_user, Remove del catálogo eliminó el producto y restauró Add to cart.",
+      "workaround": "Abrir Your Cart y usar Remove allí. Se verificó que esa alternativa vacía el carrito con error_user.",
+      "evidence": [
+        "BUG-002_antes_remove.png",
+        "BUG-002_remove_sin_efecto.png",
+        "BUG-002_carrito_persistente.png",
+        "BUG-002_repeticion.png",
+        "BUG-002_alternativa_carrito.png",
+        "CONTROL_remove_standard_user.png"
+      ],
+      "note": "El defecto queda limitado a Remove del catálogo para el producto y usuario probados. No se generaliza a todos los usuarios ni a todos los productos.",
+      "dates": [
+        "20/10/2026 21:14:52",
+        "20/10/2026 21:15:56"
+      ]
+    }
+  ]
+}

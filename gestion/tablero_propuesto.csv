@@ -1,0 +1,11 @@
+﻿ID,Title,Status,Referencia
+T-001,Diseñar los cinco casos de caja negra,Done,docs/diseno_previo.md
+T-002,Ejecutar las pruebas y conservar capturas,Done,docs/casos_caja_negra.md
+T-003,Analizar caja blanca y comprobar cobertura,Done,docs/analisis_caja_blanca.md
+T-004,Redactar dos escenarios Gherkin,Done,docs/escenarios_gherkin.md
+T-005,Documentar y reproducir defectos,Done,bugs/bugs_encontrados.md
+T-006,Revisar el informe antes de entregar,In Review,entregable/informe_hito3.pdf
+T-007,"Publicar archivos, Issues y tablero en GitHub",To Do,gestion/guia_publicacion.md
+T-008,Invitar al docente y comprobar acceso,To Do,gestion/guia_publicacion.md
+BUG-001,error_user no puede ordenar el catálogo por precio ascendente,To Do,bugs/BUG-001.md
+BUG-002,Remove del catálogo no elimina la mochila con error_user,To Do,bugs/BUG-002.md

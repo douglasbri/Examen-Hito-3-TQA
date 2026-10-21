@@ -1,0 +1,125 @@
+{
+  "criterio": "decisiones",
+  "casos": [
+    {
+      "id": "CB-001",
+      "entradas": [
+        17,
+        true,
+        100,
+        50
+      ],
+      "esperado": "Compra no permitida: edad",
+      "obtenido": "Compra no permitida: edad",
+      "estado": "PASS",
+      "lineas_ejecutadas": [
+        2,
+        3
+      ],
+      "decisiones": {
+        "D1": true
+      }
+    },
+    {
+      "id": "CB-002",
+      "entradas": [
+        18,
+        false,
+        100,
+        50
+      ],
+      "esperado": "Compra no permitida: cuenta",
+      "obtenido": "Compra no permitida: cuenta",
+      "estado": "PASS",
+      "lineas_ejecutadas": [
+        2,
+        4,
+        5
+      ],
+      "decisiones": {
+        "D1": false,
+        "D2": true
+      }
+    },
+    {
+      "id": "CB-003",
+      "entradas": [
+        18,
+        true,
+        100,
+        100
+      ],
+      "esperado": "Compra aprobada",
+      "obtenido": "Compra aprobada",
+      "estado": "PASS",
+      "lineas_ejecutadas": [
+        2,
+        4,
+        6,
+        7
+      ],
+      "decisiones": {
+        "D1": false,
+        "D2": false,
+        "D3": true
+      }
+    },
+    {
+      "id": "CB-004",
+      "entradas": [
+        18,
+        true,
+        50,
+        100
+      ],
+      "esperado": "Compra rechazada",
+      "obtenido": "Compra rechazada",
+      "estado": "PASS",
+      "lineas_ejecutadas": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "decisiones": {
+        "D1": false,
+        "D2": false,
+        "D3": false
+      }
+    },
+    {
+      "id": "CB-005",
+      "entradas": [
+        18,
+        true,
+        0,
+        0
+      ],
+      "esperado": "Compra rechazada",
+      "obtenido": "Compra rechazada",
+      "estado": "PASS",
+      "lineas_ejecutadas": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "decisiones": {
+        "D1": false,
+        "D2": false,
+        "D3": false
+      }
+    }
+  ],
+  "tres_solicitados": {
+    "resultados_cubiertos": 5,
+    "resultados_totales": 6,
+    "porcentaje": 83.33
+  },
+  "con_ajuste_CB004": {
+    "resultados_cubiertos": 6,
+    "resultados_totales": 6,
+    "porcentaje": 100.0
+  },
+  "nota": "CB-005 es una ampliación para condiciones simples; no es necesaria para 100% de decisiones."
+}
